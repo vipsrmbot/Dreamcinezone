@@ -34,7 +34,7 @@ from database.gfilters_mdb import (
 )
 import logging
 from urllib.parse import quote_plus
-from Deendayal_botz.util.file_properties import get_name, get_hash, get_media_file_size
+from dreamcinezone_botz.util.file_properties import get_name, get_hash, get_media_file_size
 from database.config_db import mdb
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
@@ -1646,7 +1646,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
                                                     InlineKeyboardButton('🖥️ Watch online 🖥️', url=lazy_stream)]])  # web stream Link
             )
-            Deendayal = await query.message.reply_text(
+            dreamcinezone = await query.message.reply_text(
                 text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                 quote=True,
                 disable_web_page_preview=True,
@@ -1655,7 +1655,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )  
             
             await asyncio.sleep(DELETE_TIME) 
-            await Deendayal.delete()
+            await dreamcinezone.delete()
             return
             
         except Exception as e:
@@ -1663,7 +1663,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(f"⚠️ SOMETHING WENT WRONG \n\n{e}", show_alert=True)
             return
             
-       #@Deendayal_dhakad
     
     elif query.data == "pagesn1":
         await query.answer(text=script.PAGE_TXT, show_alert=True)
@@ -1753,7 +1752,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto('https://graph.org/file/99eebf5dbe8a134f548e0.jpg')
         )
         await query.message.edit_text(
-            text=script.DHAKAD_DONATION.format(query.from_user.mention, QR_CODE, OWNER_UPI_ID),
+            text=script.DREAMCINE_DONATION.format(query.from_user.mention, QR_CODE, OWNER_UPI_ID),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -1865,7 +1864,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        #@Deendayal_dhakad   
+        #@dreamcinezone
     elif query.data == "free":
         buttons = [[
             InlineKeyboardButton('⚜️ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ꜰʀᴇᴇ ᴛʀɪᴀʟ', callback_data="give_trial")
@@ -1926,7 +1925,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-#Deendayal403
+#dreamcinezone403
     elif query.data == "gold":
         buttons = [[
             InlineKeyboardButton('🔐 ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', callback_data='purchase')
@@ -2015,7 +2014,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🎞 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ ', url=GRP_LNK),
             InlineKeyboardButton('☸️ ʙᴀᴄᴋᴜᴘ', url=CHNL_LNK)
         ],[
-            InlineKeyboardButton('🗣📢 ᴍᴏᴠɪᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ', url=DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK),
+            InlineKeyboardButton('🗣📢 ᴍᴏᴠɪᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ', url=DREAMCINEZONE_MOVIE_UPDATE_CHANNEL_LNK),
         ],[
             InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='help'),
             InlineKeyboardButton('➤ ᴄᴏɴᴛᴀᴄᴛ ', url=OWNER_LNK)
@@ -2139,7 +2138,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 📜', url='https://github.com/Deendayal403/Deendayal_dhakad.git'),
+            InlineKeyboardButton('Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 📜', url='https://github.com/MrRaazz/Dreamcinezone.git'),
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)

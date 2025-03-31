@@ -183,7 +183,7 @@ Nᴀᴍᴇ - {}
 • /delall - ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ᴡʜᴏʟᴇ ꜰɪʟᴛᴇʀꜱ ɪɴ ᴀ ɢʀᴏᴜᴘ.
 • /purge - ᴅᴇʟᴇᴛᴇ ᴀʟʟ ᴍᴇssᴀɢᴇs ꜰʀᴏᴍ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴍᴇssᴀɢᴇ, ᴛᴏ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴍᴇssᴀɢᴇ."""
 
-    DHAKAD_DONATION = """<b>👋 ʜᴇʏ {},
+    DREAMCINE_DONATION = """<b>👋 ʜᴇʏ {},
     
 <b>𝑷𝒍𝒆𝒂𝒔𝒆 𝑫𝒐𝒏𝒂𝒕𝒆 𝑻𝒉𝒆 𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 𝑭𝒐𝒓 𝑲𝒆𝒆𝒑𝒊𝒏𝒈 𝑻𝒉𝒆 𝑺𝒆𝒓𝒗𝒊𝒄𝒆 𝑨𝒍𝒊𝒗𝒆 & 𝑲𝒆𝒆𝒑 𝑩𝒓𝒊𝒏𝒈𝒊𝒏𝒈 𝑴𝒐𝒓𝒆 𝑵𝒆𝒘 𝑭𝒆𝒂𝒕𝒖𝒓𝒆𝒔 𝑭𝒐𝒓 𝒀𝒐𝒖...... 𝑰𝑻 𝑾𝒊𝒍𝒍 𝑺𝒖𝒑𝒑𝒐𝒓𝒕 𝑼𝒔 𝑻𝒐 𝑲𝒆𝒆𝒑 𝑶𝒖𝒓 𝑩𝒐𝒕 𝑶𝒏 𝑯𝒆𝒓𝒐𝒌𝒖 𝑨𝒏𝒅 𝑺𝒐 𝑻𝒉𝒂𝒕 𝑾𝒆 𝑪𝒂𝒏 𝑲𝒆𝒆𝒑 𝑼𝒑𝒍𝒐𝒂𝒅𝒊𝒏𝒈 𝑴𝒐𝒗𝒊𝒆𝒔 𝑨𝒏𝒅 𝑾𝒆𝒃𝒔𝒆𝒓𝒊𝒆𝒔 𝑵𝒐𝒏 𝑺𝒕𝒐𝒑 𝑰𝒏 𝑩𝒆𝒔𝒕 𝑸𝒖𝒂𝒍𝒊𝒕𝒊𝒆𝒔.<b>
 
@@ -474,7 +474,7 @@ Requested by : {message.from_user.mention}</b>"""
 
     SOURCE_TXT ="""<b>ՏOᑌᖇᑕᗴ ᑕOᗪᗴ : 👇 </b>
 
- ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ʜᴇʀᴇ ◉› :<a href=https://github.com/Deendayal403/Deendayal_dhakad.git>Deendayal_Botz</a>\n """
+ ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ʜᴇʀᴇ ◉› :<a href=https://github.com/MrRaazz/Dreamcinezone.git>dreamcinezone_Botz</a>\n """
 
     EXTRAF_TXT =""" <b> ʜᴇʀᴇ ɪꜱ ᴍʏ ᴇxᴛʀᴀ ꜰᴇᴀᴛᴜʀᴇꜱ </b>"""
 

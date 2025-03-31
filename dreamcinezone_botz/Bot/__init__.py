@@ -23,7 +23,7 @@ from pyrogram import Client
 from info import *
 
 
-class DeendayalXBot(Client):
+class dreamcinezoneXBot(Client):
 
     def __init__(self):
         super().__init__(
@@ -31,7 +31,7 @@ class DeendayalXBot(Client):
             api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,
-            workers=150,
+            workers=60,
             plugins={"root": "plugins"},
             sleep_threshold=5,
         )
@@ -74,7 +74,7 @@ class DeendayalXBot(Client):
                 yield message
                 current += 1
       
-DeendayalBot = DeendayalXBot()
+dreamcinezoneBot = dreamcinezoneXBot()
 
 multi_clients = {}
 work_loads = {}

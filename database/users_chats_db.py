@@ -1,6 +1,6 @@
 
 import motor.motor_asyncio
-from info import DATABASE_NAME, DATABASE_URI, DATABASE_URI2, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER, SHORTLINK_API, SHORTLINK_URL, IS_SHORTLINK, TUTORIAL, IS_TUTORIAL, VERIFY, PM_SEARCH, MULTI_FSUB, DEENDAYAL_MOVIE_UPDATE_NOTIFICATION, LOG_CHANNEL
+from info import DATABASE_NAME, DATABASE_URI, DATABASE_URI2, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER, SHORTLINK_API, SHORTLINK_URL, IS_SHORTLINK, TUTORIAL, IS_TUTORIAL, VERIFY, PM_SEARCH, MULTI_FSUB, DREAMCINEZONE_MOVIE_UPDATE_NOTIFICATION, LOG_CHANNEL
 import datetime
 import pytz  
 from pymongo.errors import DuplicateKeyError
@@ -35,7 +35,7 @@ class Database:
         self.grp = self.db.groups
         self.users = self.db.uersz
         self.req = self.db.requests
-        self.botcol = self.db["deendayal"]  
+        self.botcol = self.db["dreamcine"]  
         self.bot_id_col = self.db["bot_id"] 
 
     async def find_join_req(self, id):
@@ -273,10 +273,10 @@ class Database:
         await self.update_bot_setting(bot_id, 'PM_SEARCH', enable)
 
     async def movie_update_status(self, bot_id):
-        return await self.get_bot_setting(bot_id, 'DEENDAYAL_MOVIE_UPDATE_NOTIFICATION', DEENDAYAL_MOVIE_UPDATE_NOTIFICATION)
+        return await self.get_bot_setting(bot_id, 'DREAMCINEZONE_MOVIE_UPDATE_NOTIFICATION', DREAMCINEZONE_MOVIE_UPDATE_NOTIFICATION)
 
     async def update_movie_update_status(self, bot_id, enable):
-        await self.update_bot_setting(bot_id, 'DEENDAYAL_MOVIE_UPDATE_NOTIFICATION', enable)
+        await self.update_bot_setting(bot_id, 'DREAMCINEZONE_MOVIE_UPDATE_NOTIFICATION', enable)
 
         
 db = Database(DATABASE_URI, DATABASE_NAME)

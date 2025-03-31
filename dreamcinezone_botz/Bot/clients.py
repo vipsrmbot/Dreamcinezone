@@ -2,12 +2,12 @@ import asyncio
 import logging
 from info import *
 from pyrogram import Client
-from Deendayal_botz.util.config_parser import TokenParser
-from . import multi_clients, work_loads, DeendayalBot
+from dreamcinezone_botz.util.config_parser import TokenParser
+from . import multi_clients, work_loads, dreamcinezoneBot
 
 
 async def initialize_clients():
-    multi_clients[0] = DeendayalBot
+    multi_clients[0] = dreamcinezoneBot
     work_loads[0] = 0
     all_tokens = TokenParser().parse_from_env()
     if not all_tokens:

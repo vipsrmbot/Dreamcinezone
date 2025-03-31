@@ -137,6 +137,6 @@ This repository is provided for educational purposes only. It is not intended fo
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/Deendayal403/Deendayal_dhakad/blob/Deendayal_dhakad/LICENSE)
+This project is licensed under the [MIT License](https://github.com/MrRaazz/Dreamcinezone/blob/main/LICENSE)
 
 ### Jai Shree Krishna  !😉

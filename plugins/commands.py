@@ -18,7 +18,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import *
 from database.ia_filterdb import Media, Media2, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db, delete_all_msg
-from info import CHANNELS, FSUB_PICS, ADMINS, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, REQST_CHANNEL, GRP_LNK, SUPPORT_CHAT_ID, MAX_B_TN, VERIFY, REACTIONS, HOW_TO_VERIFY, PICS, DEENDAYAL_VERIFIED_LOG, SUBSCRIPTION, DEENDAYAL_VERIFY_EXPIRE, DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK, STREAM_MODE, EMOJI_MODE, OWNER_LNK, OWNER_UPI_ID, QR_CODE, DELETE_TIME
+from info import CHANNELS, FSUB_PICS, ADMINS, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, REQST_CHANNEL, GRP_LNK, SUPPORT_CHAT_ID, MAX_B_TN, VERIFY, REACTIONS, HOW_TO_VERIFY, PICS, DREAMCINEZONE_VERIFIED_LOG, SUBSCRIPTION, DREAMCINEZONE_VERIFY_EXPIRE, DREAMCINEZONE_MOVIE_UPDATE_CHANNEL_LNK, STREAM_MODE, EMOJI_MODE, OWNER_LNK, OWNER_UPI_ID, QR_CODE, DELETE_TIME
 from utils import get_settings, get_size, is_subscribed,  save_group_settings, temp, verify_user, check_token, check_verification, get_token, get_shortlink, get_tutorial, get_time
 from database.connections_mdb import active_connection
 
@@ -238,11 +238,11 @@ async def start(client, message):
             if STREAM_MODE:
                 btn = [
                     [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data=f'generate_stream_link:{file_id}')],
-                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK)]  # Keep this line unchanged
+                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DREAMCINEZONE_MOVIE_UPDATE_CHANNEL_LNK)]  # Keep this line unchanged
                 ]
             else:
                 btn = [
-                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK)]
+                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DREAMCINEZONE_MOVIE_UPDATE_CHANNEL_LNK)]
                 ]
             try:
                 await client.send_cached_media(
@@ -334,7 +334,7 @@ async def start(client, message):
             ]]
             await message.reply_photo(
                 photo="https://graph.org/file/6928de1539e2e80e47fb8.jpg",
-                caption=f"<b>Hey {message.from_user.mention},\n\n𝑌𝑜𝑢 𝐴𝑟𝑒 𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙 𝑉𝑒𝑟𝑖𝑓𝑖𝑒𝑑 ! 𝑁𝑜𝑤 𝑌𝑜𝑢 𝐻𝑎𝑣𝑒 𝑈𝑛𝑙𝑖𝑚𝑖𝑡𝑒𝑑 𝐴𝑐𝑐𝑒𝑠𝑠 𝐹𝑜𝑟 {DEENDAYAL_VERIFY_EXPIRE} HOURS.\n\n<blockquote>आप सफलतापूर्वक सत्यापित हो गए हैं अब आप {DEENDAYAL_VERIFY_EXPIRE}  घंटे  तक 𝐷𝑖𝑟𝑒𝑐𝑡 𝑀𝑜𝑣𝑖𝑒 की 𝐹𝑖𝑙𝑒𝑠 प्राप्त कर सकते हैं।</blockquote></b>",
+                caption=f"<b>Hey {message.from_user.mention},\n\n𝑌𝑜𝑢 𝐴𝑟𝑒 𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙 𝑉𝑒𝑟𝑖𝑓𝑖𝑒𝑑 ! 𝑁𝑜𝑤 𝑌𝑜𝑢 𝐻𝑎𝑣𝑒 𝑈𝑛𝑙𝑖𝑚𝑖𝑡𝑒𝑑 𝐴𝑐𝑐𝑒𝑠𝑠 𝐹𝑜𝑟 {DREAMCINEZONE_VERIFY_EXPIRE} HOURS.\n\n<blockquote>आप सफलतापूर्वक सत्यापित हो गए हैं अब आप {DREAMCINEZONE_VERIFY_EXPIRE}  घंटे  तक 𝐷𝑖𝑟𝑒𝑐𝑡 𝑀𝑜𝑣𝑖𝑒 की 𝐹𝑖𝑙𝑒𝑠 प्राप्त कर सकते हैं।</blockquote></b>",
                 reply_markup=InlineKeyboardMarkup(btn)
             )
             await verify_user(client, userid, token) 
@@ -343,13 +343,13 @@ async def start(client, message):
             current_time = now.strftime("%H:%M:%S")
             current_date = now.strftime("%Y-%m-%d")
             
-            deendayal_message = (
+            message = (
                 f"Name: {message.from_user.mention}\n"
                 f"Time: {current_time}\n"
                 f"Date: {current_date}\n"
                 f"#verify_completed"
             )
-            await client.send_message(chat_id=DEENDAYAL_VERIFIED_LOG, text=deendayal_message)
+            await client.send_message(chat_id=DREAMCINEZONE_VERIFIED_LOG, text=message)
 
         else:
             return await message.reply_text(
@@ -448,7 +448,7 @@ async def start(client, message):
                        InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
                    ]]
                     l = await message.reply_text(
-                        text=f"<b>♨️ YOU ARE NOT VERIFIED !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ इस BOT से MOVIE प्राप्त करने के लिए आपको VERIFY करना आवश्यक है VERIFY करने के बाद आप {DEENDAYAL_VERIFY_EXPIRE} घंटे तक UNLIMITED MOVIES प्राप्त कर सकते हो।</blockquote>\n\n<blockquote>🔥 अगर आप VERIFY नहीं करना चाहते तो आप PREMIUM ले सकते हो, PREMIUM लेने के बाद आप UNLIMITED MOVIES प्राप्त कर पाओगे और आपको VERIFY करने कोई जरूरत नहीं है\n\nPLAN DETAILS के लिए CLICK करें /plan</blockquote></b>",
+                        text=f"<b>♨️ YOU ARE NOT VERIFIED !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DREAMCINEZONE_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ इस BOT से MOVIE प्राप्त करने के लिए आपको VERIFY करना आवश्यक है VERIFY करने के बाद आप {DREAMCINEZONE_VERIFY_EXPIRE} घंटे तक UNLIMITED MOVIES प्राप्त कर सकते हो।</blockquote>\n\n<blockquote>🔥 अगर आप VERIFY नहीं करना चाहते तो आप PREMIUM ले सकते हो, PREMIUM लेने के बाद आप UNLIMITED MOVIES प्राप्त कर पाओगे और आपको VERIFY करने कोई जरूरत नहीं है\n\nPLAN DETAILS के लिए CLICK करें /plan</blockquote></b>",
                         protect_content=False,
                         reply_markup=InlineKeyboardMarkup(btn)
                     )
@@ -458,11 +458,11 @@ async def start(client, message):
             if STREAM_MODE:
                 btn = [
                     [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data=f'generate_stream_link:{file_id}')],
-                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK)]  # Keep this line unchanged  
+                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DREAMCINEZONE_MOVIE_UPDATE_CHANNEL_LNK)]  # Keep this line unchanged  
                 ]
             else:
                 btn = [
-                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK)]
+                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DREAMCINEZONE_MOVIE_UPDATE_CHANNEL_LNK)]
                 ]
 
             msg = await client.send_cached_media(
@@ -528,7 +528,7 @@ async def start(client, message):
                         InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
                    ]]
                    l = await message.reply_text(
-                       text=f"<b>♨️ YOU ARE NOT VERIFIED !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ इस BOT से MOVIE प्राप्त करने के लिए आपको VERIFY करना आवश्यक है VERIFY करने के बाद आप {DEENDAYAL_VERIFY_EXPIRE} घंटे  तक UNLIMITED MOVIES प्राप्त कर सकते हो। <blockquote>\n\n<blockquote>🔥 अगर आप VERIFY नहीं करना चाहते तो आप PREMIUM ले सकते हो, PREMIUM लेने के बाद आप UNLIMITED MOVIES प्राप्त कर पाओगे और आपको VERIFY करने कोई जरूरत नही है\n\nPLAN DETAILS के लिए CLICK करें /plan</blockquote></b>",
+                       text=f"<b>♨️ YOU ARE NOT VERIFIED !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DREAMCINEZONE_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ इस BOT से MOVIE प्राप्त करने के लिए आपको VERIFY करना आवश्यक है VERIFY करने के बाद आप {DREAMCINEZONE_VERIFY_EXPIRE} घंटे  तक UNLIMITED MOVIES प्राप्त कर सकते हो। <blockquote>\n\n<blockquote>🔥 अगर आप VERIFY नहीं करना चाहते तो आप PREMIUM ले सकते हो, PREMIUM लेने के बाद आप UNLIMITED MOVIES प्राप्त कर पाओगे और आपको VERIFY करने कोई जरूरत नही है\n\nPLAN DETAILS के लिए CLICK करें /plan</blockquote></b>",
                        protect_content=False,
                        reply_markup=InlineKeyboardMarkup(btn)
                    )
@@ -538,12 +538,12 @@ async def start(client, message):
             if STREAM_MODE:
                 btn = [
                     [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data=f'generate_stream_link:{file_id}')],
-                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK)]  # Keep this line unchanged
+                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DREAMCINEZONE_MOVIE_UPDATE_CHANNEL_LNK)]  # Keep this line unchanged
              
                 ]
             else:
                 btn = [
-                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK)]
+                    [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DREAMCINEZONE_MOVIE_UPDATE_CHANNEL_LNK)]
                 ]
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -605,7 +605,7 @@ async def start(client, message):
               InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
            ]]
             l = await message.reply_text(
-                text=f"<b>♨️ YOU ARE NOT VERIFIED !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ इस BOT से MOVIE प्राप्त करने के लिए आपको VERIFY करना आवश्यक है VERIFY करने के बाद आप {DEENDAYAL_VERIFY_EXPIRE}  घंटे  तक UNLIMITED MOVIES प्राप्त कर सकते हो।</blockquote> \n\n<blockquote>🔥 अगर आप VERIFY नहीं करना चाहते तो आप PREMIUM ले सकते हो, PREMIUM लेने के बाद आप UNLIMITED MOVIES प्राप्त कर पाओगे और आपको VERIFY करने कोई जरूरत नहीं है\n\nPLAN DETAILS के लिए CLICK करें /plan</blockquote></b>",
+                text=f"<b>♨️ YOU ARE NOT VERIFIED !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DREAMCINEZONE_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ इस BOT से MOVIE प्राप्त करने के लिए आपको VERIFY करना आवश्यक है VERIFY करने के बाद आप {DREAMCINEZONE_VERIFY_EXPIRE}  घंटे  तक UNLIMITED MOVIES प्राप्त कर सकते हो।</blockquote> \n\n<blockquote>🔥 अगर आप VERIFY नहीं करना चाहते तो आप PREMIUM ले सकते हो, PREMIUM लेने के बाद आप UNLIMITED MOVIES प्राप्त कर पाओगे और आपको VERIFY करने कोई जरूरत नहीं है\n\nPLAN DETAILS के लिए CLICK करें /plan</blockquote></b>",
                 protect_content=False,
                 reply_markup=InlineKeyboardMarkup(btn)
             )
@@ -615,11 +615,11 @@ async def start(client, message):
     if STREAM_MODE:
         btn = [
             [InlineKeyboardButton('🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', callback_data=f'generate_stream_link:{file_id}')],
-            [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK)]  # Keep this line unchanged
+            [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DREAMCINEZONE_MOVIE_UPDATE_CHANNEL_LNK)]  # Keep this line unchanged
         ]
     else:
         btn = [
-            [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DEENDAYAL_MOVIE_UPDATE_CHANNEL_LNK)]
+            [InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url=DREAMCINEZONE_MOVIE_UPDATE_CHANNEL_LNK)]
         ]
     msg = await client.send_cached_media(
         chat_id=message.from_user.id,
